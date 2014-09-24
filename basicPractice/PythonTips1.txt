@@ -1,0 +1,2 @@
+# This is a file recording small tips while I'm learning Python.
+# It will not being formed in a structured way. Instead, there will be only some important ideas in this file.
