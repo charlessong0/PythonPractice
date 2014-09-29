@@ -1,2 +1,8 @@
 # This is a file recording small tips while I'm learning Python.
 # It will not being formed in a structured way. Instead, there will be only some important ideas in this file.
+
+1. If you come from another country, you may have to make sure your files are encoded in UTF-8: add this line of code at the head of each script.
+# -*- coding: utf-8 -*-
+
+2.
+
