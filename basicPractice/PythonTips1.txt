@@ -1,4 +1,7 @@
 # This is a file recording small tips while I'm learning Python.
+#
+# The basic practice come from the online course "learn Python the hard way". It is really great that this way is not really hard for beginners. For the Website please find http://learnpythonthehardway.org/book
+#
 # It will not being formed in a structured way. Instead, there will be only some important ideas in this file.
 
 1. If you come from another country, you may have to make sure your files are encoded in UTF-8: add this line of code at the head of each script.
