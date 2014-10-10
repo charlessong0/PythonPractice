@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 print "hello world!"
 print "and this is another line!"
 print "I'd like to print a ' there"
