@@ -7,5 +7,25 @@
 1. If you come from another country, you may have to make sure your files are encoded in UTF-8: add this line of code at the head of each script.
 # -*- coding: utf-8 -*-
 
-2.
+2.If there are variables in a string, the values of these variables must follow the string derectly like: "this is a sentence %s" %word -- but not like: "this is a sentence", "isent it?" %word
 
+3.Python format characters
+Conversion	Meaning	Notes
+d	Signed integer decimal.	
+i	Signed integer decimal.	
+o	Unsigned octal.	(1)
+u	Unsigned decimal.	
+x	Unsigned hexadecimal (lowercase).	(2)
+X	Unsigned hexadecimal (uppercase).	(2)
+e	Floating point exponential format (lowercase).	
+E	Floating point exponential format (uppercase).	
+f	Floating point decimal format.	
+F	Floating point decimal format.	
+g	Same as "e" if exponent is greater than -4 or less than precision, "f" otherwise.	
+G	Same as "E" if exponent is greater than -4 or less than precision, "F" otherwise.	
+c	Single character (accepts integer or single character string).	
+r	String (converts any python object using repr()).	(3)
+s	String (converts any python object using str()).	(4)
+%	No argument is converted, results in a "%" character in the result.
+
+4. 	
