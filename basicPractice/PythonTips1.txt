@@ -45,3 +45,4 @@ s	String (converts any python object using str()).	(4)
 \xhh	Character with hex value hh	
 
 5. 
+
