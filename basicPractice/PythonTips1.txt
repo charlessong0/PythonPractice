@@ -44,5 +44,5 @@ s	String (converts any python object using str()).	(4)
 \ooo	Character with octal value ooo
 \xhh	Character with hex value hh	
 
-5. 
+5.%r is the debug mode representing for raw. Useful and meaningful. 
 
