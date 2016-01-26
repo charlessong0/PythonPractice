@@ -9,5 +9,6 @@ Start from basci functions and variable operations.
 Use the tutorial of:
 http://learnpythonthehardway.org/book/
 
-2016-01-25
+2016-01-26
+
 
