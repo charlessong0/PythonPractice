@@ -46,3 +46,4 @@ s	String (converts any python object using str()).	(4)
 
 5.%r is the debug mode representing for raw. Useful and meaningful. 
 
+6. do check the type of inputs, like argv is string array
