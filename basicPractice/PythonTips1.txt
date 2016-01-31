@@ -47,3 +47,8 @@ s	String (converts any python object using str()).	(4)
 5.%r is the debug mode representing for raw. Useful and meaningful. 
 
 6. do check the type of inputs, like argv is string array
+
+7. raw_input("to input your data")
+
+8. use append() to add elements in the tail of an array
+
