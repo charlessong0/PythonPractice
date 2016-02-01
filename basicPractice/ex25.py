@@ -1,3 +1,4 @@
+numbers = 100
 def test1(number):
 	return number+1
 def splitwords(words):
