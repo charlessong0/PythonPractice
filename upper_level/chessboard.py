@@ -1,4 +1,4 @@
-class chessboard(object):
+class ChessBoard(object):
     def __init__(self, row, column):
         self.row = row
         self.column = column
@@ -17,7 +17,7 @@ class chessboard(object):
                     temp_row += " _"
                 print temp_row
 
-#test = chessboard()
-test = chessboard(5,5)
+#test = ChessBoard()
+test = ChessBoard(5,5)
 test.print_test()
 
