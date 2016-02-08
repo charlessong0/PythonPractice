@@ -43,3 +43,4 @@ class AnotherSong(object):
         print "haha123"
 test_on_class = AnotherSong()
 test_on_class.some_thing()
+
