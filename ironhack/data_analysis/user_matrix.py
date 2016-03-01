@@ -70,7 +70,7 @@ for key in final:
         ws.write(index[hacker[0]], temp, hacker[1])
 #ws.write(0,0, 123)
 #ws.write(1,1, 'iii')
-wb.save("output.xlsx")
+wb.save("output.xls")
 
 
 #for rx in range(sh.nrows):
