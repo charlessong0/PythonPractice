@@ -3,25 +3,32 @@ import numpy as np
 import string
 import xlrd
 
-'''
-book = xlrd.open_workbook("test.xlsx")
+
+book = xlrd.open_workbook("output.xls")
 print "The number of worksheets is", book.nsheets
 print "Worksheet name(s):", book.sheet_names()
-sh = book.sheet_by_index(2)
-sh0 = book.sheet_by_index(0)
-sh3 = book.sheet_by_index(3)
+sh = book.sheet_by_index(0)
+#sh0 = book.sheet_by_index(0)
+#sh3 = book.sheet_by_index(3)
 print sh.name, sh.nrows, sh.ncols
-print "Cell D30 is", sh.cell_value(rowx=29, colx=3)
-'''
+print "Cell D30 is", sh.cell_value(rowx=3, colx=3)
+
+array = [[0 for x in range(sh.nrows-1)] for x in range(sh.ncols-1)]
+
+for i in range(1, sh.nrows):
+	for j in range(1, sh.ncols):
+		array[i-1][j-1] = sh.cell_value(rowx=i, colx=j)
+print array
 
 dt = [('len', float)]
 
-A = np.array([(0.3, 0, 0.3, 0.4, 0.7),
-               (0.3, 0.6,  0, 0.9, 0.2),
-               (0.4, 0.9, 0.4, 0, 0.1),
-               (0.7, 0.2, 0.1, 0.1, 0),
-               (0.3, 0.9, 0.9, 0.5, 0.1)		
-               ])*10
+A = np.array(array)*10
+#A = np.array([(0.3, 0, 0.3, 0.4, 0.7),
+#               (0.3, 0.6,  0, 0.9, 0.2),
+#               (0.4, 0.9, 0.4, 0, 0.1),
+#               (0.7, 0.2, 0.1, 0.1, 0),
+#               (0.3, 0.9, 0.9, 0.5, 0.1)		
+#               ])*10
 A = A.view(dt)
 
 G = nx.from_numpy_matrix(A)
