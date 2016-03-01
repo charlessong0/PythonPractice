@@ -22,7 +22,7 @@ print array
 
 dt = [('len', float)]
 
-A = np.array(array)/5
+A = np.array(array)
 #A = np.array([(0.3, 0, 0.3, 0.4, 0.7),
 #               (0.3, 0.6,  0, 0.9, 0.2),
 #               (0.4, 0.9, 0.4, 0, 0.1),
