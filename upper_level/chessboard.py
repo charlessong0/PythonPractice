@@ -38,6 +38,7 @@ class ChessBoard(object):
 
     # find if anyone wins there
     def check_winner(self, number):
+        # check the rows
         for i in range(self.row):
             temp_number = 0
             temp_pawn = "_"
@@ -77,4 +78,3 @@ if row.isdigit() and column.isdigit():
     test.print_test()
 else:
     print "please enter an number!"
-
