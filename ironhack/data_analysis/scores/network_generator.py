@@ -4,10 +4,10 @@ import string
 import xlrd
 
 
-book = xlrd.open_workbook("phase2-phase1.xls")
+book = xlrd.open_workbook("phase3-phase1.xls")
 print "The number of worksheets is", book.nsheets
 print "Worksheet name(s):", book.sheet_names()
-sh = book.sheet_by_index(0)
+sh = book.sheet_by_index(1)
 #sh0 = book.sheet_by_index(0)
 #sh3 = book.sheet_by_index(3)
 print sh.name, sh.nrows, sh.ncols
@@ -42,7 +42,4 @@ G = nx.drawing.nx_agraph.to_agraph(G)
 G.node_attr.update(color="red", style="filled")
 G.edge_attr.update(color="blue", width="2.0")
 
-G.draw('output2-1Tech.png', format='png', prog='neato')
-
-
-
+G.draw('output3-1total.png', format='png', prog='neato')
