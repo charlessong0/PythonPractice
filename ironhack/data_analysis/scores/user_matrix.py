@@ -3,8 +3,8 @@ import xlwt
 from collections import defaultdict
 import collections
 
-book1 = xlrd.open_workbook("phase1-final-score.xlsx")
-book2 = xlrd.open_workbook("phase2-final-score.xlsx")
+book1 = xlrd.open_workbook("phase3-final-score.xlsx")
+book2 = xlrd.open_workbook("phase3-final-score.xlsx")
 book3 = xlrd.open_workbook("phase3-final-score.xlsx")
 
 print "The number of worksheets is", book1.nsheets
@@ -84,7 +84,10 @@ for i in range(1, 23):
 
 #ws.write(0,0, 123)
 #ws.write(1,1, 'iii')
-wb1.save("phase2-phase1.xls")
-wb2.save("phase3-phase2.xls")
-wb3.save("phase3-phase1.xls")
+#wb1.save("phase2-phase1.xls")
+#wb2.save("phase3-phase2.xls")
+#wb3.save("phase3-phase1.xls")
 
+wb1.save("phase3-phase3-1.xls")
+wb2.save("phase3-phase3-2.xls")
+wb3.save("phase3-phase3-3.xls")
