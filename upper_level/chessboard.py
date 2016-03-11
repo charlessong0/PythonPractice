@@ -44,7 +44,7 @@ class ChessBoard(object):
             temp_pawn = "_"
             for j in range(self.column):
                 if self.board[i][j] == "O":
-                    if temp_pawn = "O":
+                    if temp_pawn == "O":
                         temp_number += 1
                         if temp_number == number:
                             return temp_pawn
@@ -52,7 +52,7 @@ class ChessBoard(object):
                         temp_pawn = "O"
                         temp_number = 1
                 elif self.board[i][j] == "X":
-                    if temp_pawn = "X":
+                    if temp_pawn == "X":
                         temp_number += 1
                         if temp_number == number:
                             return temp_pawn
