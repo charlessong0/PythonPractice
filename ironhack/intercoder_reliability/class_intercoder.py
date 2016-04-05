@@ -1,3 +1,4 @@
+from __future__ import division
 import xlrd
 import xlwt
 import glob
@@ -16,7 +17,7 @@ num_total = 0
 for path1 in file_list:
     book1 = xlrd.open_workbook(path1)
     sh1 = book1.sheet_by_index(0)
-
+    index_x = 1
     for path2 in file_list:
         '''
         print path1
@@ -41,12 +42,12 @@ for path1 in file_list:
                    num_matching = num_matching + 1 
                 num_total = num_total + 1
         #write into output
-        ws.write(index_x, index_y, num_matching/num_total)
+        print index_x, index_y
+        ws.write(index_y, index_x, num_matching/num_total)
         #swich to next y and reset the numbers
         num_matching = 0
         num_total = 0
         index_x = index_x+1
-
     index_y = index_y+1
 
 wb.save("output.xls")
