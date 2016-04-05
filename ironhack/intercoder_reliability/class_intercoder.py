@@ -29,15 +29,15 @@ for path1 in file_list:
         #x range: 2-4; y range: 50-54, 58-59, 63-68
         for i in range(2, 5):
             for j in range(50, 55):
-                if (sh1.cell_value(rowx=i, colx=j) == sh2.cell_value(rowx=i, colx=j)):
+                if (sh1.cell_value(rowx=j, colx=i) == sh2.cell_value(rowx=j, colx=i)):
                    num_matching = num_matching + 1 
                 num_total = num_total + 1
             for j in range(58, 60):
-                if (sh1.cell_value(rowx=i, colx=j) == sh2.cell_value(rowx=i, colx=j)):
+                if (sh1.cell_value(rowx=j, colx=i) == sh2.cell_value(rowx=j, colx=i)):
                    num_matching = num_matching + 1 
                 num_total = num_total + 1
             for j in range(63, 69):
-                if (sh1.cell_value(rowx=i, colx=j) == sh2.cell_value(rowx=i, colx=j)):
+                if (sh1.cell_value(rowx=j, colx=i) == sh2.cell_value(rowx=j, colx=i)):
                    num_matching = num_matching + 1 
                 num_total = num_total + 1
         #write into output
