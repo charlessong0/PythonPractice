@@ -4,7 +4,7 @@ import xlwt
 import glob
 import os
 
-file_list = glob.glob("data/*.xlsx")
+file_list = glob.glob("data_test/*.xls")
 wb = xlwt.Workbook()
 ws = wb.add_sheet("intercoder_matrix", cell_overwrite_ok=True)
 
