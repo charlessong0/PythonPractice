@@ -6,7 +6,7 @@ import os
 
 file_list = glob.glob("data/*.xls")
 wb = xlwt.Workbook()
-ws = wb.add_sheet("intercoder_matrix", cell_overwrite_ok=True)
+ws = wb.add_sheet("result", cell_overwrite_ok=True)
 
 index_x = 1
 index_y = 1
