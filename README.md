@@ -1,14 +1,8 @@
 PthonPractice
 ==============
 
-Practice using Python
+All my python scripts will be stored here, including the ironhack analysis scripts.
 
-The subfolder "basicPractice" is the initial practicing folder of me.
-Start from basci functions and variable operations.
 
-Use the tutorial of:
-http://learnpythonthehardway.org/book/
-
-2016-01-26
-
+2016-04-21
 
