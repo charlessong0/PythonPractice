@@ -21,14 +21,14 @@ function initMap() {
     marker = new google.maps.Marker({
         position: {lat: 41.85081542, lng: -87.69123528},
         map: map,
-        title: 'Chicago'
+        title: 'West Lafayette'
     });
 
     infowindow = new google.maps.InfoWindow({
                             content: ""
                         });
     google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent("Chicago City");
+        infowindow.setContent("West Lafayette");
                             infowindow.open(map, marker);
                         });
 

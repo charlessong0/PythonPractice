@@ -195,7 +195,6 @@ public class SyntaxNet extends Object
                 }
             }
 
-
             // Shuffle the particles randomly so they will settle out
             for (i=1; i<numSyls; i++){
                 Particle p = physics.getParticle(i-1);
