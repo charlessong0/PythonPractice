@@ -1,4 +1,5 @@
 import xlrd
+import random
 import xlwt
 from collections import defaultdict
 import collections
@@ -30,7 +31,7 @@ print list2
 print list3
 
 wb = xlwt.Workbook()
-ws = wb.add_sheet('rest', cell_overwrite_ok=True)
+ws = wb.add_sheet('test', cell_overwrite_ok=True)
 
 for num in range(0, 26):
     ws.write(0, num+1, name_list.get(num))
@@ -38,12 +39,12 @@ for num in range(0, 26):
 for num1 in range(0, 26):
     ws.write(num1+1, num1+1, 1)
     for num2 in range(num1+1, 26):
-        ws.write(num1+1, num2+1, 0)
+        ws.write(num1+1, num2+1, random.random()*0.22)
 for num in range(0, 342):
     num1 = names.get(list1[num])
     num2 = names.get(list2[num])
     if (num1 > num2):
-        ws.write(num2+1, num1+1, list3[num])
+        ws.write(num2+1, num1+1, list3[num]+random.random()*0.18)
     else:
-        ws.write(num1+1, num2+1, list3[num])
-wb.save('output.xls')
+        ws.write(num1+1, num2+1, list3[num]+random.random()*0.18)
+wb.save('output_f3.xls')
