@@ -4,7 +4,7 @@ from collections import defaultdict
 import collections
 
 book1 = xlrd.open_workbook("green_names.xlsx")
-book2 = xlrd.open_workbook("OutWit_green4.xlsx")
+book2 = xlrd.open_workbook("OutWit_green4_new.xlsx")
 #print "The number of worksheets is", book.nsheets
 #print "Worksheet name(s):", book.sheet_names()
 sh1 = book1.sheet_by_index(0)
@@ -31,7 +31,7 @@ for num in range(0, 26):
 print names
 print name_list
 
-for num in range(0, 100):
+for num in range(0, 342):
     list1.append(sh2.cell(rowx=num, colx=5).value)
     list2.append(sh2.cell(rowx=num, colx=7).value)
     list3.append(sh2.cell(rowx=num, colx=10).value)
