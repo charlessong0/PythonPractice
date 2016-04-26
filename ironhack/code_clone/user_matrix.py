@@ -31,7 +31,7 @@ for num in range(0, 26):
 print names
 print name_list
 
-for num in range(0, 50):
+for num in range(0, 100):
     list1.append(sh2.cell(rowx=num, colx=5).value)
     list2.append(sh2.cell(rowx=num, colx=7).value)
     list3.append(sh2.cell(rowx=num, colx=10).value)
@@ -45,6 +45,10 @@ ws = wb.add_sheet('rest', cell_overwrite_ok=True)
 for num in range(0, 26):
     ws.write(0, num+1, name_list.get(num))
     ws.write(num+1, 0, name_list.get(num))
+for num1 in range(0, 26):
+    ws.write(num1+1, num1+1, 1)
+    for num2 in range(num1+1, 26):
+        ws.write(num1+1, num2+1, 0)
 for num in range(0, 26):
     num1 = names.get(list1[num])
     num2 = names.get(list2[num])
