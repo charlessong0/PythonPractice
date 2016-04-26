@@ -9,7 +9,6 @@ book2 = xlrd.open_workbook("OutWit_green4_new.xlsx")
 #print "Worksheet name(s):", book.sheet_names()
 sh1 = book1.sheet_by_index(0)
 sh2 = book2.sheet_by_index(0)
-#sh3 = book.sheet_by_index(3)
 #print sh.name, sh.nrows, sh.ncols
 #print "Cell D30 is", sh.cell_value(rowx=29, colx=3)
 
