@@ -33,9 +33,13 @@ result = ""
 for num in range(1, 24):
     results.append(result)
     result = ""
+    print 1
     for num2 in range(0, 7):
-        if (sh1.cell(rowx=num, colx=num2).value == "TRUE"):
+        print sh1.cell(rowx=num, colx=num2).value
+        if (sh1.cell(rowx=num, colx=num2).value == 1):
+            print 2
             result = result + sh1.cell(rowx=0, colx = num2).value
+print results
 '''    
 weekday.append(sh1.cell(rowx=num, colx=1).value)
     distinction.append(sh1.cell(rowx=num, colx=2).value)
