@@ -38,7 +38,7 @@ for num in range(1, 24):
         print sh1.cell(rowx=num, colx=num2).value
         if (sh1.cell(rowx=num, colx=num2).value == 1):
             print 2
-            result = result + sh1.cell(rowx=0, colx = num2).value
+            result = result +","+ sh1.cell(rowx=0, colx = num2).value
 print results
 '''    
 weekday.append(sh1.cell(rowx=num, colx=1).value)
@@ -52,7 +52,7 @@ print weekday
 wb = xlwt.Workbook()
 ws = wb.add_sheet('test', cell_overwrite_ok=True)
 for num in range(0, len(results)):
-    ws.write(0, num, results[num])
+    ws.write(num, 0, results[num])
 wb.save("output_indymeth.xls")
 '''
 ws.write(0, 0, "index")
