@@ -1,6 +1,7 @@
 from pymongo import MongoClient
 import hashlib
 import base64
+import xlrd
 
 class Client:
     def __init__(self, ip, port, db_name):
@@ -22,37 +23,21 @@ class Client:
 client2 = Client("localhost", 27017, "iot")
 collection = client2.connectDB("versions")
 
+
 #output.xls
-new_version = {
-    "ironhackName": "greenironhack",
-    "currentPhase": 1,
-    "phases": []
-}
-collection.insert(new_version)
+book1 = xlrd.open_workbook('output.xls')
+sh1 = book1.sheet_by_index(0)
+for row in range(sh1.nrows):
+    print 1
+    data = {
+        "index": sh1.cell(rowx=row, colx=0).value,
+        "distinction": sh1.cell(rowx=row, colx=1).value,
+        "type": sh1.cell(rowx=row, colx=2).value,
+        "number": sh1.cell(rowx=row, colx=3).value
+    }
+    collection.insert(data)
+
 client2.close()
 
 '''
-client1 = Client("localhost", 27017, "ironhack")
-collection = client1.connectDB("posts")
-print collection.find_one()
-# post data for greenironhack 
-# technology evalution
-participants_tech = [
-    [],
-    [],
-    []
-]
-judges_tech = []
-for judge in judges_tech:
-    
-# infoviz evlaution
-participants_info = [
-    [],
-    [],
-    [],
-    [],
-    []
-]
-judges_info = []
-for judge in judges_info:
 '''
