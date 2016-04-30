@@ -2,8 +2,9 @@ import xlrd
 import xlwt
 from collections import defaultdict
 import collections
+import random
 
-book1 = xlrd.open_workbook("911test2.xls")
+book1 = xlrd.open_workbook("911tes2.xls")
 #book2 = xlrd.open_workbook("OutWit_green4_new.xlsx")
 
 sh1 = book1.sheet_by_index(0)
@@ -34,11 +35,12 @@ for num in range(0, 100):
     types.append(sh1.cell(rowx=num, colx=3).value)
     hours.append(sh1.cell(rowx=num, colx=4).value)
 print time
-'''
+print weekday
+
 
 wb = xlwt.Workbook()
 ws = wb.add_sheet('test', cell_overwrite_ok=True)
-
+'''
 ws.write(0, 0, "index")
 ws.write(0, 0, "year")
 ws.write(0, 0, "month")
@@ -48,9 +50,20 @@ ws.write(0, 0, "hour")
 ws.write(0, 0, "distinctionIndex")
 ws.write(0, 0, "type")
 ws.write(0, 0, "number")
-
-
-
+'''
+ws.write(0, 0, "index")
+ws.write(0, 1, "distinction")
+ws.write(0, 2, "type")
+ws.write(0, 3, "number")
+for i in range(0, 100):
+    for j in range(1, 6):
+        num = 5*i+j
+        ws.write(num, 0, num)
+        ws.write(num, 1, i)
+        ws.write(num, 2, "type"+str(j))
+        ws.write(num, 3, random.randint(0, 100)) 
+wb.save('output.xls')
+'''
 for num in range(0, 26):
     ws.write(0, num+1, name_list.get(num))
     ws.write(num+1, 0, name_list.get(num))
