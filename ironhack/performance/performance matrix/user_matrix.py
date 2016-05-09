@@ -19,12 +19,14 @@ position = [1,2,3,4,7,8,10,11,19,20]
 for row in position:
     for column in position:
         array.append(sh1.cell(rowx=row, colx=column).value)
+print array
 
 wb = xlwt.Workbook()
 ws = wb.add_sheet('test_sheet', cell_overwrite_ok=True)
 num=0
 for item in array:
     ws.write(num, 0, item)
+    num = num+1
 
 wb.save("output.xls")
 '''
