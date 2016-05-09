@@ -3,7 +3,7 @@ import xlwt
 from collections import defaultdict
 import collections
 
-book1 = xlrd.open_workbook("phase2-phase1.xls")
+book1 = xlrd.open_workbook("phase3-phase3-1.xls")
 #book2 = xlrd.open_workbook("names.xlsx")
 
 sh1 = book1.sheet_by_index(0)
@@ -28,7 +28,7 @@ for item in array:
     ws.write(num, 0, item)
     num = num+1
 
-wb.save("output.xls")
+wb.save("output-phase3-phase3-tech.xls")
 '''
 matrix = [[]]
 
