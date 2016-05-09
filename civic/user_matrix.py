@@ -56,12 +56,12 @@ ws.write(0, 1, "distinction")
 ws.write(0, 2, "type")
 ws.write(0, 3, "number")
 for i in range(0, 100):
-    for j in range(1, 6):
-        num = 5*i+j
+    for j in range(1, 21):
+        num = 20*i+j
         ws.write(num, 0, num)
         ws.write(num, 1, i)
         ws.write(num, 2, "type"+str(j))
-        ws.write(num, 3, random.randint(0, 100)) 
+        ws.write(num, 3, random.randint(0, 200)) 
 wb.save('output.xls')
 '''
 for num in range(0, 26):
